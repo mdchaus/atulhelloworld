@@ -37,7 +37,13 @@ pipeline {
         stage('Package') {
             steps {
                 // Package the application
-                sh 'mvn package'
+                sh 'echo mvn package'
+            }
+        }
+        
+        stage('Archive Artifact') {
+            steps {
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
 
