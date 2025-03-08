@@ -46,27 +46,28 @@ pipeline {
                 // Simple deployment example
                 sh 'echo "Deploying application..."'
                 // Example of copying artifacts to a deploy location
-                //sh 'cp target/basic-java-app-1.0-SNAPSHOT.jar cd /var/lib/jenkins/workspace/HelloWorld_Time_Pipeline/target/'
+                java -jar "target/basic-java-app-1.0-SNAPSHOT.jar" 
+                sh 'cp target/basic-java-app-1.0-SNAPSHOT.jar cd /var/lib/jenkins/workspace/HelloWorld_Time_Pipeline/target/'
                 sh 'chmod +x jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
             }
         }
     }
 
-    //post {
-      //  always {
+    post {
+        always {
             // Clean up actions
-        //    sh 'echo "Cleaning up..."'
-        //}
+            sh 'echo "Cleaning up..."'
+        }
 
-        //success {
+        success {
             // Actions on successful build
-          //  echo 'Build succeeded!'
-        //}
+            echo 'Build succeeded!'
+        }
 
-        //failure {
+        failure {
             // Actions on failed build
-          //  echo 'Build failed!'
-        //}
-    //}
+            echo 'Build failed!'
+        }
+    }
 }
