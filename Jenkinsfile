@@ -68,5 +68,5 @@ pipeline {
             // Actions on failed build
           //  echo 'Build failed!'
         //}
-    }
+    //}
 }
