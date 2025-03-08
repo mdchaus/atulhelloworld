@@ -55,12 +55,12 @@ pipeline {
                 //java - jar "target/basic-java-app-1.0-SNAPSHOT.jar" 
                 
                 sh 'ls -l target/'  // Debugging: List JAR files in target/
-                sh 'chmod +x target/*.jar'  // Make JAR executable
-                sh 'java -jar target/basic-java-app-1.0-SNAPSHOT.jar'  // Run JAR file
+                //sh 'chmod +x target/*.jar'  // Make JAR executable
+                //sh 'java -jar target/basic-java-app-1.0-SNAPSHOT.jar'  // Run JAR file
 
                 //sh 'cp target/basic-java-app-1.0-SNAPSHOT.jar cd /var/lib/jenkins/workspace/HelloWorld_Time_Pipeline/target/'
-                //sh 'chmod +x jenkins/scripts/deliver.sh'
-                //sh './jenkins/scripts/deliver.sh'
+                sh 'chmod +x jenkins/scripts/deliver.sh'
+                sh './jenkins/scripts/deliver.sh'
             }
         }
     }
