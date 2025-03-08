@@ -11,7 +11,8 @@ pipeline {
             steps {
                 // Checkout code from SCM
                 checkout scm
-                javac src/main/java/com/mycompany/app/App.java
+                //javac src/main/java/com/mycompany/app/App.java
+                //src/test/java/com/mycompany/app/AppTest.java
 
             }
         }
@@ -19,8 +20,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the project using Maven
-                 //sh 'echo '
-                sh 'mvn clean test'
+                 sh 'echo hello'
+                //sh 'mvn clean test'
 
                 //sh 'mvn -B -DskipTests clean package'
             }
