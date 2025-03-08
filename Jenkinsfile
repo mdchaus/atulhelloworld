@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // Checkout code from SCM
                 checkout scm
-                javac HelloWorld.java
+                javac src/main/java/com/mycompany/app/App.java
 
             }
         }
