@@ -20,10 +20,10 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the project using Maven
-                 sh 'echo hello'
+                 //sh 'echo hello'
                 //sh 'mvn clean test'
 
-                //sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
 
