@@ -17,21 +17,21 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the project using Maven
-                echo sh 'mvn clean install'
+                 sh 'echo mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
                 // Run unit tests
-                echo sh 'mvn test'
+                 sh 'echo mvn test'
             }
         }
 
         stage('Package') {
             steps {
                 // Package the application
-                echo sh 'mvn package'
+                sh 'echo mvn package'
             }
         }
 
