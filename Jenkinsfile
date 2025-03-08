@@ -11,6 +11,8 @@ pipeline {
             steps {
                 // Checkout code from SCM
                 checkout scm
+                javac HelloWorld.java
+
             }
         }
 
