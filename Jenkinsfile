@@ -18,6 +18,7 @@ pipeline {
             steps {
                 // Build the project using Maven
                  sh 'echo mvn clean install'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
 
