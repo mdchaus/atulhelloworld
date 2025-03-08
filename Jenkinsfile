@@ -37,7 +37,7 @@ pipeline {
         stage('Package') {
             steps {
                 // Package the application
-                sh 'echo mvn package'
+                sh 'mvn package'
             }
         }
 
