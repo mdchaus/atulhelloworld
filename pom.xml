@@ -48,6 +48,10 @@
                             <mainClass>com.example.App</mainClass>
                         </manifest>
                     </archive>
+                    <httpConnector>
+                     <port>8081</port>
+                  </httpConnector>
+
                 </configuration>
                 <!--<groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
