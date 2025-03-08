@@ -53,20 +53,20 @@ pipeline {
         }
     }
 
-    post {
-        always {
+    //post {
+      //  always {
             // Clean up actions
-            sh 'echo "Cleaning up..."'
-        }
+        //    sh 'echo "Cleaning up..."'
+        //}
 
-        success {
+        //success {
             // Actions on successful build
-            echo 'Build succeeded!'
-        }
+          //  echo 'Build succeeded!'
+        //}
 
-        failure {
+        //failure {
             // Actions on failed build
-            echo 'Build failed!'
-        }
+          //  echo 'Build failed!'
+        //}
     }
 }
