@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven 3.9.5' // Ensure this version is configured in Jenkins
-        jdk 'JDK 17'      // Ensure this JDK version is configured in Jenkins
-    }
+    //tools {
+      //  maven 'Maven 3.9.5' // Ensure this version is configured in Jenkins
+      //  jdk 'JDK 17'      // Ensure this JDK version is configured in Jenkins
+    //}
     
     stages {
         stage('Checkout') {
